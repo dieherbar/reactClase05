@@ -36,9 +36,22 @@ function RenderButtons(text){
 }
 arrayButtons.forEach(element => RenderButtons(element));
 
- //=> {});
+ //<<ejercicio>>
 
-let arrInputs = ["nombre", "apellido", "fecNac", "email"];
+var arrInputs = ["input", "input", "output", "input","output"];
+
+function filtrarInput(elemento){
+    return elemento = "input";
+}
+var inputFiltrados = arrInputs.filter(filtrarInput);
+
+function RenderInputs(text){
+    let myInput = new Input("inputsArr", text );
+    myInput.render();
+}
+inputFiltrados.forEach(element => RenderInputs(element));
+///////////////////////////////////////////////////////////
+
 
 
 const unInput = new Input("inputs", "email");
@@ -51,13 +64,5 @@ const unInputCheck = new Input("inputs", "checkbox");
 unInputCheck.render();
 
 
-///////////////chat GPT//////////////////
-// const data = ['input1', 'input2', 'input3'];
-// const elemento = data.filter(item => item.startsWith('input'));
-// const elemento2 = data.filter(item => item.startsWith('input')).map(item => {
-//     const input = document.createElement('input');
-//     input.setAttribute('type', 'text');
-//     input.setAttribute('value', item);
-//     return input;
-//   });
+
   
